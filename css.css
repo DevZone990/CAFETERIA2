@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Poppins:wght@100;500&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
@@ -12,8 +13,10 @@
 /*variables*/
 :root{
     --main-color:#885d29;
-    --second-color:#ccc4b0;
+    --second-color:#F4F7BE;
+    --tree-color:#220C10;
     --text-color:#0e0d0d;
+    --rosita-color:#cb9072;
     --bg-color:#fff;
     /*shadow*/
     --box-shadow:2px 2px 10px 4px rgb(14 55 54 / 15%);
@@ -28,21 +31,29 @@ img{
 body{
     background-color: var(--main-color);
 }
+.hidden{
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+.mostrar{
+   transform: scale(1);
+   opacity: 1;
+}
 
 /*header*/
 header{
     position: fixed;
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     top: 0;right: 0;
     z-index:1000;
     display: flex;
     /* justify-content: space-between;  */
     align-items: center;
-    padding: .5rem 6.5rem;
     padding: 1rem 2rem;
     transition:0.5s linear ;
-    /* background:#0e0d0db7; */
+    background:#0e0d0db7;
 }
 .logo img{
     border-radius: 50%;
@@ -51,28 +62,37 @@ header{
 
     
 }
-.navbar{
-    display: flex;
-}
+
 .navbar a{
-    padding: 8px 2rem;
-    /* padding-left: 4rem; */
-    color: var(--bg-color);
+    /* padding: 8px 1.5rem;
+    color: var(--second-color);
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 500;
-    
+    font-weight: 500; */
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--second-color);
+}
+.nav{
+    display: block;
 }
 .navbar a:hover{
     background-color: var(--main-color);
     border-radius: 0.2rem;
     transition: 0.2s all linear;
+    padding: 0.5rem;
 }
-#menu-icon{
-    color: var(--bg-color);
-    font-size: 24px;
-    z-index: 100001;
-    cursor: pointer;
+   .header .icons i{
+        color: var(--main-color);
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+    
+    }
+    .header .icons i:hover{
+        color: var(--main-color);
+    }
+     #menu-btn{
     display: none;
 }
 /* home */
@@ -94,9 +114,15 @@ header{
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.home-text h1 span{
+    font-size: 4rem;
+    color: var(--second-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 .home-text p{
     font-size:1.5rem;
-    color: var(--bg-color);
+    color: var(--second-color);
     margin: 0.5rem 0 1.4rem;
 }
 
@@ -105,3 +131,427 @@ header{
     margin-right: 3rem;
 }
 /* about */
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 2rem;  
+    background-color: var(--second-color);
+}
+
+.heading{
+    text-align: center;
+    color: #fff;
+   
+}
+.heading h2{
+    font-size: 4rem;
+    color:var(--second-color);
+    text-transform: uppercase;
+    
+}
+
+.about-text h2{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-transform:uppercase ;
+   
+}
+.about-text p{
+    font-size: 1rem;
+    margin:0.5rem 0 1.1rem ;
+}/*----menú--*/
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;  
+    /* background-color: var(--second-color); */
+    margin-top:2rem ;
+}
+.menu-container .box1{
+    background-color: var(--second-color);
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+.menu-container img{
+    width:100% ;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+
+}
+.menu-container .box1 h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem .5rem 0.5rem;
+}
+.menu-container .box1 .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-container .box1 .content span{
+    padding: 0 1rem;
+    color:var(--second-color) ;
+    border-radius: 0.5rem;
+    font-size: 500;
+    background-color:var(--rosita-color);
+   
+}
+.menu-container .box1 .content ul li{
+    padding: 0rem 1rem 0rem 0rem;
+    color:var(--tree-color) ;
+    font-size: 500;
+    list-style:disc;
+
+}
+/* productos */
+.products{
+    background-color: var(--second-color);
+}
+
+.heading2{
+    text-align: center;
+ 
+   
+}
+.heading2 h3{
+    color: var(--main-color);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.box-container{
+    /* background-color: var(--second-color); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,auto));
+    gap: 2rem;  
+    margin-top:2rem ;
+    
+}
+
+
+.box-container .box{
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+   
+
+}
+.box-container .image img{
+    width:60% ;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+
+}
+.box-container .content  {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box-container .content h3{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem .5rem 0.5rem;
+    background-color: var(--rosita-color);
+    color: var(--second-color);
+    padding: 0 1rem;
+}
+.box-container .content{
+    color:var(--second-color);
+    background-color: var(--rosita-color);
+    padding: .5rem 0;
+    font-size: 2rem ;
+    border-radius: 0.5rem;
+}
+/* vsita */
+.vista-producto{
+    position: fixed;
+    top:0;left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background:rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+.vista-producto .vista{
+    display:none;
+    padding: 2rem;
+    text-align: center;
+    background:var(--second-color);
+    position: relative;
+    margin: 17rem auto;
+    margin: 2rem;
+    width:40rem ;
+    height: 38rem;
+    border-radius: 0.5rem;
+
+}
+
+.vista-producto .vista.active{
+    display: inline-block;
+    width:40rem ;
+    height: 38rem;
+}
+ 
+.vista-producto .vista img{
+    height:18rem ;
+    /* width: 20rem; */
+    border-radius: 0.5rem;
+    object-fit: contain;
+}
+
+.vista-producto .vista .bx-x-circle{
+    position: absolute; 
+    right: 0px;top:1px ;
+    cursor: pointer;
+    color:var(--rosita-color);
+    font-size: 3rem;
+
+
+}
+
+.vista-producto .vista h3{
+    color:var(--second-color);
+    background-color: var(--rosita-color);
+    padding: .4rem 0;
+    font-size: 1.8rem ;
+    border-radius: 0.5rem;
+}
+.vista-producto .vista .price{
+    border-radius: 0.5rem;
+    color:var(--second-color);
+    background-color: var(--main-color);
+    font-size: 1.8rem;
+    width: 30%;
+    margin: 0 auto;
+}
+.vista-producto .vista p{
+    line-height:1.5 ;
+    padding: .5rem 0;
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+/* contacto */
+.heading3{
+    text-align: center;
+}
+.heading3 h3{
+    color: var(--second-color);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.contact .row{
+    display: flex;
+    background: var(--main-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+   
+}
+
+.contact .row a{
+    color: var(--rosita-color);
+    font-size: 1.5rem;
+ 
+    /* justify-content: space-between; */
+}
+.contact .row .container-contacto{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.contact .row .container-contacto span{
+    color: var(--second-color);
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: lighter;
+}
+.contact .row .container-contacto a{
+    color:var(--second-color);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+   
+}
+
+.footer{
+    background: var(--tree-color);
+    text-align: center;
+}
+.footer .shar a{
+    height:5rem ;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--rosita-color);
+    border: var(--border);
+    margin: .3rem;
+    border-radius:50% ;
+
+}
+.footer .shar a:hover{
+    background: var(--rosita-color);
+    color: var(--second-color);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+.footer .links a{
+    padding: .7rem 2rem;
+    color: var(--main-color);
+    border: var(--border);
+    font-size: 2rem;
+}
+.footer .links a:hover{
+    background: var(--rosita-color);
+    color: var(--second-color);
+}
+.footer .credits{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding: 1.5rem;
+}
+.footer .credits span{
+    color:var(--rosita-color) ;
+}
+/* footer section fin------------------ */
+@media (max-width: 991px) {
+    html{
+        font-size:90% ;
+       
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    section{
+        padding: 2rem;
+     }
+  }
+
+  @media (max-width: 768px) {
+    #menu-btn{
+        display:inline-block;
+    }
+
+    .header{
+        justify-content: space-between;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;right:-100%;
+        background: 30rem;
+        background: var(--second-color);
+        width: 40rem;
+        height: 100vh;
+        transition: 1s ease; 
+    }
+    .header .navbar.active{
+        right: 0px;
+        transition: .8s ease;
+
+    }
+    .header .navbar a {
+        color: var(--tree-color);
+        display: block;
+        margin: 1.5rem 3rem;
+        padding: 1rem;
+        font-size: 2rem;
+        text-align: end;
+          }
+    .header .navbar a:active{
+           border: 2px solid var(--rosita-color);
+            border-radius: 0.2rem;
+            transition: 0.2s all linear;
+        }
+    /* .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+  }
+
+
+
+  @media (max-width: 450px) {
+    html{
+        font-size:50% ;
+       
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;right: -100%;
+        background: var(--bg);
+        width: 100%;
+        height: 100vh;
+        transition: 1s ease; 
+    }
+    .header .navbar.active{
+        right: 0px;
+        transition: .8s ease;
+
+    }
+    .header .navbar a{
+        color:#ccc;
+        display: block;
+        margin: 3rem;
+        padding: 1rem;
+        font-size:2.5rem ;
+        text-align:center;
+    }
+ 
+
+} 
+    .vista-producto .vista img{
+        height:15rem ;
+        width: 15rem;
+    }
+    .vista-producto .vista .fa-times{
+     font-size: 3rem;
+     position: absolute;
+     right: 1rem;
+     top:.5rem;
+  }   
+  .vista-producto{
+    margin-top: 3rem;
+  */
+}
+  

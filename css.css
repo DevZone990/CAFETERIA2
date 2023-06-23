@@ -104,7 +104,7 @@ header{
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    grid-template-columns: repeat(auto-fit,minmax(25rem,auto));
     align-items: center;
     gap: 1.5rem;
 }
@@ -133,7 +133,7 @@ header{
 /* about */
 .about{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    grid-template-columns: repeat(auto-fit,minmax(25rem,auto));
     align-items: center;
     gap: 2rem;  
     background-color: var(--second-color);
@@ -489,7 +489,7 @@ section{
         top: 100%;right:-100%;
         background: 30rem;
         background: var(--second-color);
-        width: 40rem;
+        width: 60%;
         height: 100vh;
         transition: 1s ease; 
     }
@@ -503,7 +503,7 @@ section{
         display: block;
         margin: 1.5rem 3rem;
         padding: 1rem;
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: end;
           }
     .header .navbar a:active{
@@ -511,7 +511,48 @@ section{
             border-radius: 0.2rem;
             transition: 0.2s all linear;
         }
-    .home{
+        .home{
+            background-position: left;
+            justify-content: center;
+            text-align: start;
+            grid-template-rows:repeat(auto-fit,minmax(5rem,auto)) ;
+            row-gap: 1.4rem;
+        }
+        .home-img{
+            width: 16rem;
+            align-items: center;
+           margin: 0 auto;
+        }    
+        .home .home-text h1 ,.home .home-text span{
+            font-size: 4rem;
+        }
+         
+        .home .home-text p{
+            font-size: 1.5rem;
+        }   
+        /* .menu-container .box1{
+            height: 30rem;
+        } */
+        .menu-container img{
+            /* width:20rem ; */
+            height: 20rem;
+            object-fit: contain;
+            
+        }
+        .menu-container .box1 h3{
+            font-size: 1.5rem;
+            text-align: center;
+            /* padding-left:1.5rem ; */
+            margin: 0 auto;
+        }
+        .menu-container .box1 .content ul li{
+            font-size:1.1rem ;
+            text-align: start;
+        }
+        .menu-container .box1 .content span{
+            font-size: 2rem;
+        }
+    /* .home{
         background-position: left;
         justify-content: center;
         text-align: start;
@@ -521,11 +562,12 @@ section{
     }    
     .home .home-text h1 ,.home .home-text span{
         font-size: 3.5rem;
+        font-weight: 4rem;
     }
      
     .home .home-text p{
         font-size: 1.5rem;
-    }
+    } */
 
   }
  
@@ -533,13 +575,23 @@ section{
 
   @media (max-width: 450px) {
     html{
+        width: 100%;
         font-size:50% ;
        
     }
     .header{
         width: 100%;
+        height: 5rem;
     }
-    .header .navbar{
+    .header .icons i{
+        font-size: 4rem;
+        
+    
+    }
+    .logo img{
+        width: 6rem;
+    }
+    .header nav .navbar{
         position: absolute;
         top: 100%;right: -100%;
         background: var(--second-color);
@@ -555,7 +607,7 @@ section{
     .header .navbar a{
         color:var(--main-color);
         display: block;
-        margin: 3rem;
+        margin: 1rem;
         padding: 1rem;
         font-size:2.5rem ;
         text-align:end;
@@ -578,27 +630,47 @@ section{
     .menu-container .box1 .content span{
         font-size: 2.5rem;
     }
-    .home{
+    /* .home{
+       
         background-position: left;
         justify-content: center;
         text-align: start;
-        grid-template-rows:repeat(auto-fit,minmax(10rem,auto)) ;
-        
-    }
+        grid-template-rows:repeat(auto-fit,minmax(auto-fit,28rem)) ;
+        row-gap: 1.4rem;
+        grid:2 row 1px;;
+    } */
     .home-img{
-        width: 25rem;
-    }    
+        width: 20rem;
+        order: 1;
+    } 
+    .home-text{
+        padding-top: 14px;
+        text-align: center;
+    }   
     .home .home-text h1 ,.home .home-text span{
         font-size: 4rem;
+     
     }
      
     .home .home-text p{
         font-size: 2rem;
+       
     }
-
-
+    .about-text{
+        text-align: center;
+    }
+    .about-text h2{
+        font-size: 5rem;
+        
+    }
+    .about-text p{
+        font-size: 1.5rem;
+    }
  
+    .box1{
+        padding: 0;
 
+    }
 } 
     /* .vista-producto .vista img{
         height:15rem ;

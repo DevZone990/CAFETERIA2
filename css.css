@@ -104,7 +104,7 @@ header{
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,auto));
+    grid-template-columns: repeat(auto-fit,minmax(24rem,auto));
     align-items: center;
     gap: 1.5rem;
 }
@@ -514,9 +514,10 @@ section{
         .home{
             background-position: left;
             justify-content: center;
-            text-align: start;
+            text-align: center;
             grid-template-rows:repeat(auto-fit,minmax(5rem,auto)) ;
             row-gap: 1.4rem;
+            padding: 1rem auto;
         }
         .home-img{
             width: 16rem;
@@ -525,10 +526,16 @@ section{
         }    
         .home .home-text h1 ,.home .home-text span{
             font-size: 4rem;
+            padding-top: 1.3rem;
         }
          
         .home .home-text p{
-            font-size: 1.5rem;
+            font-size: 1.7rem;
+            text-align: center;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
         }   
         /* .menu-container .box1{
             height: 30rem;
@@ -551,6 +558,21 @@ section{
         }
         .menu-container .box1 .content span{
             font-size: 2rem;
+        }
+        .about-img{
+            width: 35rem;
+            height: 30rem;
+            margin: 0 auto;
+
+        }
+        .about-text{
+            text-align: center;
+            padding-top: 1rem;
+         
+        }
+        .about-text p{
+         
+            font-size: 1.5rem;
         }
     /* .home{
         background-position: left;
@@ -640,7 +662,7 @@ section{
         grid:2 row 1px;;
     } */
     .home-img{
-        width: 20rem;
+        width: 22rem;
         order: 1;
     } 
     .home-text{
@@ -658,6 +680,16 @@ section{
     }
     .about-text{
         text-align: center;
+        padding-top: 1rem;
+     
+    }
+    .about-text p{
+        padding-bottom: 1rem;
+        font-size: 2rem;
+    }
+    /* .about-text{
+        text-align: center;
+        padding: 10px auto;
     }
     .about-text h2{
         font-size: 5rem;
@@ -665,12 +697,8 @@ section{
     }
     .about-text p{
         font-size: 1.5rem;
-    }
+    } */
  
-    .box1{
-        padding: 0;
-
-    }
 } 
     /* .vista-producto .vista img{
         height:15rem ;

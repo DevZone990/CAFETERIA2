@@ -379,18 +379,25 @@ header{
 .contact .row .container-contacto{
     display: flex;
     justify-content: center;
+    /* flex-direction: column; */
     padding: 1rem;
+    margin: 0 auto;
 }
 .contact .row .container-contacto span{
     color: var(--second-color);
     font-size: 2rem;
     padding: 1rem;
     font-weight: lighter;
+    flex-direction: row;
+    margin: 0 auto;
 }
 .contact .row .container-contacto a{
     color:var(--second-color);
     font-size: 1.5rem;
     padding: 1rem;
+    flex-direction:row;
+    margin: 0 auto;
+
 }
 
 
@@ -447,9 +454,17 @@ header{
     color:var(--rosita-color) ;
 }
 /* footer section fin------------------ */
+@media(max-width:1500px){
+ header{
+    padding: 16px 60px;
+}
+section{
+   padding: 50px 60px;
+ }
+}
 @media (max-width: 991px) {
     html{
-        font-size:90% ;
+        font-size:100% ;
        
     }
     .header{
@@ -467,6 +482,7 @@ header{
 
     .header{
         justify-content: space-between;
+        height: 4rem;
     }
     .header .navbar{
         position: absolute;
@@ -495,20 +511,24 @@ header{
             border-radius: 0.2rem;
             transition: 0.2s all linear;
         }
-    /* .home{
+    .home{
         background-position: left;
         justify-content: center;
-        text-align: center;
+        text-align: start;
     }
-    .home .content h3{
-        font-size: 4.5rem;
+    .home-img{
+        width: 17rem;
+    }    
+    .home .home-text h1 ,.home .home-text span{
+        font-size: 3.5rem;
     }
-    .home .content p{
+     
+    .home .home-text p{
         font-size: 1.5rem;
     }
 
   }
-
+ 
 
 
   @media (max-width: 450px) {
@@ -516,31 +536,71 @@ header{
         font-size:50% ;
        
     }
+    .header{
+        width: 100%;
+    }
     .header .navbar{
         position: absolute;
         top: 100%;right: -100%;
-        background: var(--bg);
-        width: 100%;
+        background: var(--second-color);
+        width: 40%;
         height: 100vh;
         transition: 1s ease; 
     }
-    .header .navbar.active{
+     .header .navbar.active{
         right: 0px;
         transition: .8s ease;
 
     }
     .header .navbar a{
-        color:#ccc;
+        color:var(--main-color);
         display: block;
         margin: 3rem;
         padding: 1rem;
         font-size:2.5rem ;
-        text-align:center;
+        text-align:end;
     }
+    .menu-container img{
+        /* width:20rem ; */
+        height: 40rem;
+        object-fit: contain;
+        
+    }
+    .menu-container .box1 h3{
+        font-size: 2rem;
+        text-align: center;
+        padding-left:2rem ;
+    }
+    .menu-container .box1 .content ul li{
+        font-size:2rem ;
+        text-align: start;
+    }
+    .menu-container .box1 .content span{
+        font-size: 2.5rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: start;
+        grid-template-rows:repeat(auto-fit,minmax(10rem,auto)) ;
+        
+    }
+    .home-img{
+        width: 25rem;
+    }    
+    .home .home-text h1 ,.home .home-text span{
+        font-size: 4rem;
+    }
+     
+    .home .home-text p{
+        font-size: 2rem;
+    }
+
+
  
 
 } 
-    .vista-producto .vista img{
+    /* .vista-producto .vista img{
         height:15rem ;
         width: 15rem;
     }
@@ -552,6 +612,6 @@ header{
   }   
   .vista-producto{
     margin-top: 3rem;
-  */
-}
+ 
+  }    */
   

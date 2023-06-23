@@ -40,6 +40,9 @@ body{
    transform: scale(1);
    opacity: 1;
 }
+.home{
+    background: url(img/coffee-beans-dark-background-top-view-coffee-concept.jpg);
+}
 
 /*header*/
 header{
@@ -100,7 +103,7 @@ header{
     /* margin-top:5rem ; */
     width: 100%;
     min-height: 100vh;
-    background: url(img/coffee-beans-dark-background-top-view-coffee-concept.jpg);
+    /* background: url(img/coffee-beans-dark-background-top-view-coffee-concept.jpg); */
     background-size: cover;
     background-position: center;
     display: grid;

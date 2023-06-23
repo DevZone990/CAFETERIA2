@@ -691,6 +691,23 @@ section{
         padding-bottom: 1rem;
         font-size: 2rem;
     }
+    .vista-producto .vista.active{
+        display: inline-block;
+        width:50rem ;
+        height: 42rem;
+    }
+    .vista-producto .vista h3{
+        font-size: 2.5rem;
+    }
+    .vista-producto .vista p{
+        font-size: 1.5rem;
+    }
+    .vista-producto .vista .price{
+        font-size: 2.3rem;
+    }
+    .vista-producto .vista .bx-x-circle{
+        font-size: 4rem;
+    }
     /* .about-text{
         text-align: center;
         padding: 10px auto;
@@ -704,18 +721,4 @@ section{
     } */
  
 } 
-    /* .vista-producto .vista img{
-        height:15rem ;
-        width: 15rem;
-    }
-    .vista-producto .vista .fa-times{
-     font-size: 3rem;
-     position: absolute;
-     right: 1rem;
-     top:.5rem;
-  }   
-  .vista-producto{
-    margin-top: 3rem;
- 
-  }    */
-  
+

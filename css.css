@@ -42,7 +42,7 @@ body{
    opacity: 1;
 }
 .home{
-    background: url(img/coffee-beans-dark-background-top-view-coffee-concept.jpg);
+    background: url(img/fondo2.jpg);
 }
 
 /*header*/
@@ -553,7 +553,8 @@ section{
         .home-img{
             width: 16rem;
             align-items: center;
-           margin: 0 auto;
+            margin: 0 auto;
+            
         }    
         .home .titulo h1 ,.home .titulo span{
             font-size: 4rem;

@@ -257,7 +257,7 @@ header{
     /* background-color: var(--second-color); */
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(22rem,auto));
-    gap: 2rem;  
+    gap: 1.5rem;  
     margin-top:2rem ;
     
 }
@@ -266,9 +266,8 @@ header{
 .box-container .box{
     background-color: var(--main-color);
     text-align: center;
-    padding: 2rem;
     position: relative;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,7 +334,7 @@ header{
 
 .vista-producto .vista.active{
     display: inline-block;
-    width:40rem ;
+    width:35rem ;
     height: 38rem;
 }
  
@@ -653,6 +652,7 @@ section{
         object-fit: contain;
         
     }
+    
     .menu-container .box1 h3{
         font-size: 2rem;
         text-align: center;
@@ -708,6 +708,8 @@ section{
     .vista-producto .vista .bx-x-circle{
         font-size: 4rem;
     }
- 
+    .about-img{
+        width: 25rem;
+    }
 } 
 
